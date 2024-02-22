@@ -1,0 +1,51 @@
+{
+  "name": "convert-functions-to-arrows",
+  "displayName": "Convert Functions to Arrows",
+  "description": "将普通函数转为箭头函数",
+  "publisher": "fengjun0725",
+  "icon": "images/icon.png",
+  "keywords": [
+    "functions",
+    "arrows",
+    "fengjun"
+  ],
+  "version": "1.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.convertToArrowFunctions"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "vscode-plugin-demo",
+			"properties": {
+				"vscodePluginDemo.yourName": {
+					"type": "string",
+					"default": "guest",
+					"description": "你的名字"
+				},
+				"vscodePluginDemo.showTip": {
+					"type": "boolean",
+					"default": true,
+					"description": "是否在每次启动时显示欢迎提示！"
+				}
+			}
+		},
+    "commands": [
+      {
+        "command": "extension.convertToArrowFunctions",
+        "title": "Convert Functions to Arrow Functions"
+      }
+    ]
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8"
+  }
+}
